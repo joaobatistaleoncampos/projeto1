@@ -59,47 +59,6 @@ form.addEventListener("submit", async (e) => {
 
                // TENTANDO ESPECIFICAR DESTINO NO BANCO DE
 
-try {
-    await addDoc(collection(db, "Doações para terceiros"), {
-      nome: nome,
-      contato: contato,
-      itens: {
-        roupas: roupas,
-        calcados: calcados,
-        cama: cama,
-        outros: outros
-      },
-      data: new Date()
-
-    });
-    alert("Contato registrado,em breve alguém vai entrar em contato!");
-    form.reset();
-
-  } catch (erro) {
-    console.error("Erro ao salvar:", erro);
-    alert("Erro ao salvar!");
-  }
-
-try {
-    await addDoc(collection(db, "Quero doar"), {
-      nome: nome,
-      contato: contato,
-      itens: {
-        roupas: roupas,
-        calcados: calcados,
-        cama: cama,
-        outros: outros
-      },
-      data: new Date()
-
-    });
-    alert("Contato registrado,em breve alguém vai entrar em contato!");
-    form.reset();
-
-  } catch (erro) {
-    console.error("Erro ao salvar:", erro);
-    alert("Erro ao salvar!");
-  }
 
 try {
     await addDoc(collection(db, "Quero doações"), {
